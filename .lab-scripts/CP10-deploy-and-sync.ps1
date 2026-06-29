@@ -34,6 +34,14 @@ $pkgProj    = Join-Path $LabRoot "src/Packages.Main/Packages.Main.csproj"
 $publishDir = Join-Path $LabRoot ".lab-scripts/.tmp-deploy"
 Remove-Item $publishDir -Recurse -Force -ErrorAction SilentlyContinue
 
+# Build the plugin library directly first. The package build's EnsurePluginAssemblyDataXml
+# task reads the plugin's published assembly (bin/Release/<tfm>/publish/), but building the
+# plugin only as a transitive dependency of the package publish does not produce that output
+# under the .NET 10 SDK — it fails with "FileNotFoundException: Build not found". Building the
+# plugin project on its own creates the publish/ folder the task expects.
+dotnet build (Join-Path $LabRoot "src/Plugins.Warehouse/Plugins.Warehouse.csproj") -c Release --nologo --verbosity quiet
+if ($LASTEXITCODE -ne 0) { Write-Err "Plugin build failed"; exit 1 }
+
 dotnet publish $pkgProj -c Release -o $publishDir --nologo --verbosity quiet
 if ($LASTEXITCODE -ne 0) { Write-Err "dotnet publish failed"; exit 1 }
 
