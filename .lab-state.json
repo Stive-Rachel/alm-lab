@@ -1,5 +1,8 @@
 {
   "randomIdentifier": 1924,
   "txcAuth": "stive@rsv-consulting.fr",
-  "tenantId": "088a0c5d-20b5-4bed-8fd8-2a5c4e4770cc"
+  "tenantId": "088a0c5d-20b5-4bed-8fd8-2a5c4e4770cc",
+  "solutionName": "WarehouseManagement",
+  "publisherName": "ALMLab",
+  "publisherPrefix": "almlab"
 }
