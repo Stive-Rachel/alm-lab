@@ -7,5 +7,13 @@
   "publisherPrefix": "almlab",
   "repo": "Stive-Rachel/alm-lab",
   "mainRulesetId": 18266223,
-  "mainRulesetName": "alm-lab-main-protection"
+  "mainRulesetName": "alm-lab-main-protection",
+  "devEnvName": "Warehouse dev 1924",
+  "devEnvDomain": "wm-dev-1924",
+  "devEnvUrl": "https://wm-dev-1924.crm4.dynamics.com",
+  "devProfile": "dev",
+  "testEnvName": "Warehouse test 1924",
+  "testEnvDomain": "wm-test-1924",
+  "testEnvUrl": "https://wm-test-1924.crm4.dynamics.com",
+  "testProfile": "test"
 }
