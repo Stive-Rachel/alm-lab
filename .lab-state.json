@@ -7,5 +7,13 @@
   "repo": "Stive-Rachel/alm-lab",
   "mainRulesetId": 18266223,
   "mainRulesetName": "alm-lab-main-protection",
-  "randomIdentifier": 5491
+  "randomIdentifier": 5491,
+  "devEnvName": "Warehouse dev 5491",
+  "devEnvDomain": "wm-dev-5491",
+  "devEnvUrl": "https://wm-dev-5491.crm4.dynamics.com",
+  "devProfile": "dev",
+  "testEnvName": "Warehouse test 5491",
+  "testEnvDomain": "wm-test-5491",
+  "testEnvUrl": "https://wm-test-5491.crm4.dynamics.com",
+  "testProfile": "test"
 }
